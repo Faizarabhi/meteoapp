@@ -5,16 +5,16 @@ import {
   Text
 } from "react-native";
 import {  CustomButton} from "../components";
-const Home = () => {
+const Detaille = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <Text>Hello</Text>
+      <Text>Detaille</Text>
       <CustomButton  screen="Login" sujet='Log Out' />
     </SafeAreaView>
   );
 };
 
-export default Home;
+export default Detaille;
 
 const styles = StyleSheet.create({
   container: {

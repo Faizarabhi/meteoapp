@@ -3,23 +3,23 @@ import {
     View,
     Text,
     TouchableOpacity,
-    StyleSheet
+    StyleSheet,
+    SafeAreaView
 } from "react-native";
-import { Feather } from '@expo/vector-icons'; 
 import { Entypo } from '@expo/vector-icons';
-
+// #0a9dfb, #84d4fc, #447494, #5484ac, #adc594, #2c4454 
 const Header = () => {
 
     return (
-        <View style={styles.headerContainer} >
+        <SafeAreaView style={styles.headerContainer} >
             <TouchableOpacity>
-                <Feather name="shopping-cart" size={24} color="black" />
+                <Entypo name="cloud" size={50} color="#84d4fc" />
             </TouchableOpacity>
                 <Text style={styles.logo} >Logo</Text>
             <TouchableOpacity>
                 <Entypo name="dots-three-vertical" size={24} color="black" />
             </TouchableOpacity>
-        </View>
+        </SafeAreaView>
     )
 }
 
@@ -27,13 +27,16 @@ export default Header;
 
 const styles = StyleSheet.create({
     headerContainer: {
+        backgroundColor: '#fff',
         flexDirection: 'row',
         justifyContent: 'space-between',
         alignItems: 'center',
-        marginHorizontal: '5%'
+        marginHorizontal: '5%',
+        padding: 12
     },
     logo:{
         fontSize: 22,
         fontWeight: '600',
+        
     }
 })
