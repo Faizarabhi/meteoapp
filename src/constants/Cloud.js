@@ -1,32 +1,32 @@
 export const Cloud = [
     {
-        id: 1,
-        img: require('../../assets/rain.png'),
+        id: '01d',
+        img: '../../assets/rain.png',
         name: 'Rain'
     },
     {
-        id: 2,
-        img: require('../../assets/suncloud.png'),
+        id: '02d',
+        img: '../../assets/suncloud.png',
         name: 'Sunn'
     },
     {
-        id: 3,
-        img: require('../../assets/snow.png'),
+        id: '03d',
+        img: '../../assets/snow.png',
         name: 'Snow'
     },
     {
-        id: 4,
-        img: require('../../assets/rain.png'),
+        id: '04d',
+        img: '../../assets/rain.png',
         name: 'Rain'
     },
     {
-        id: 5,
-        img: require('../../assets/suncloud.png'),
+        id: '05d',
+        img: '../../assets/suncloud.png',
         name: 'Sunn'
     },
     {
-        id: 6,
-        img: require('../../assets/snow.png'),
+        id: '06d',
+        img: '../../assets/snow.png',
         name: 'Snow'
     },
 
