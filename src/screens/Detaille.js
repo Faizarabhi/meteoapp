@@ -9,7 +9,6 @@ const Detaille = () => {
   return (
     <SafeAreaView style={styles.container}>
       <Text>Detaille</Text>
-      <CustomButton  screen="Login" sujet='Log Out' />
     </SafeAreaView>
   );
 };

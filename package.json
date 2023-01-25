@@ -13,10 +13,12 @@
     "@react-navigation/bottom-tabs": "^6.5.3",
     "@react-navigation/native": "^6.1.2",
     "@react-navigation/stack": "^6.3.11",
+    "deprecated-react-native-prop-types": "^4.0.0",
     "expo": "~47.0.12",
     "expo-status-bar": "~1.4.2",
     "react": "18.1.0",
     "react-native": "0.70.5",
+    "react-native-blur": "^3.2.2",
     "react-native-popup-menu": "^0.16.1",
     "react-navigation-stack": "^2.10.4"
   },

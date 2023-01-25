@@ -7,12 +7,13 @@ import {
     } from  'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
 
-const CustomInput = ({type, icon})=>{
+const CustomInput = ({type, icon, label})=>{
     const [text, setText] = React.useState("");
 
     return (
         <View style={styles.container}>
-        <Text style={styles.label}>{type}:</Text>
+            {label?
+        <Text style={styles.label} >{type}:</Text> : ''}
         <MaterialCommunityIcons name={icon} size={24} style={styles.icon} color="black" />
       <TextInput
         label={type}
@@ -29,8 +30,7 @@ const CustomInput = ({type, icon})=>{
 export default CustomInput
 const styles = StyleSheet.create({
 container:{
-    justifyContent:'center',
-    alignItems: 'center'
+   
 },
 label:{
     fontSize: 32,
@@ -43,12 +43,11 @@ input:{
     borderWidth: 1,
     borderRadius: 10,
     padding: 10,
-    margin: 11
 },
 icon:{
     position: "absolute",
-    bottom: 22,
-    right: 60,
+    bottom: 12,
+    right: 100,
     color: '#0a9dfb'
 }
 })

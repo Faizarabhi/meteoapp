@@ -32,11 +32,11 @@ const styles = StyleSheet.create({
         justifyContent: 'space-between',
         alignItems: 'center',
         marginHorizontal: '5%',
-        padding: 12
+        padding: 12,
+
     },
     logo:{
         fontSize: 22,
         fontWeight: '600',
-        
     }
 })

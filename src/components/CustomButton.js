@@ -32,9 +32,7 @@ const styles = StyleSheet.create({
         justifyContent: "center",
         backgroundColor: "#0a9dfb",
         padding: 10,
-        borderRadius: 10,
-        padding: 15,
-        margin: 10,
+        borderRadius: 5,
         justifyContent: "flex-center",
         width: "80%",
     },
@@ -44,4 +42,5 @@ const styles = StyleSheet.create({
         fontSize: 20,
 
     },
+    
 });

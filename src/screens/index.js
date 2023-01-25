@@ -6,5 +6,6 @@ export {
     Home,
     Login,
     Signup,
-    Detaille
+    Detaille,
+    
 }

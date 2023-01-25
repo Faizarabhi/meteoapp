@@ -1,7 +1,7 @@
 import { StyleSheet, SafeAreaView} from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import {Home, Login, Signup, Detaille} from './src/screens';
+import {Home, Login, Signup} from './src/screens';
 import { Header } from './src/components';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 const Stack = createStackNavigator();
@@ -10,14 +10,14 @@ export default function App() {
  
 
   return (<>
-  <NavigationContainer>
+  {/* <NavigationContainer>
       
       <Tab.Navigator screenOptions={{ headerShown: false }}>
         <Tab.Screen name="Home" component={Home} />
-        <Tab.Screen name="Detaille" component={Detaille} />
+        <Tab.Screen name="Detaille" component={Login} />
       </Tab.Navigator>
-    </NavigationContainer>
-        {/* <Header/>
+    </NavigationContainer> */}
+        <Header/>
       <NavigationContainer> 
         <Stack.Navigator
          initialRouteName="Login"
@@ -30,16 +30,12 @@ export default function App() {
           <Stack.Screen name="Login" component={Login} />
           <Stack.Screen name="Signup" component={Signup} />
         </Stack.Navigator>
-      </NavigationContainer> */}
+      </NavigationContainer>
       </>
   );
 }
-// function HomeTabs() {
-//   return (
-//     <Tab.Navigator>
-//       <Tab.Screen name="Home" component={Home} />
-//       <Tab.Screen name="Feed" component={Detaille} />
-//     </Tab.Navigator>
-//   );
-// }
 
+
+const styles = StyleSheet.create({
+  
+});
