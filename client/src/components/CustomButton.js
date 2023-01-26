@@ -32,7 +32,8 @@ const styles = StyleSheet.create({
         padding: 10,
         borderRadius: 5,
         justifyContent: "flex-center",
-        width: "80%",
+        width: "100%",
+        marginVertical: "5%"
     },
     text: {
         color: "white",

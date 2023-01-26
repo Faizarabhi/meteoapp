@@ -2,6 +2,7 @@ import {
     Text,
     View,
     StyleSheet,
+    Image,
     SafeAreaView} from 'react-native'
 import { 
     CustomButton,
@@ -10,12 +11,17 @@ import {
 const Signup = ()=>{
     return(
         <View style={styles.container}>
-        <Text  style={styles.text}>Create Account with us:</Text>
-        <CustomInput type='user_name' icon='account' label='true' />
-      <CustomInput type='email' icon='email' label='true' />
-      <CustomInput type='password' icon='account-lock' label='true' />
+       <View style={styles.main}>
+          <Image source={require('../../assets/login.png')} style={styles.img} />
+        </View>
+        <View style={styles.form}>
+        <Text style={styles.text}>Create Account with us:</Text>
+        <CustomInput type='user name' icon='account' label='true' />
+        <CustomInput type='email' icon='email' label='true' />
+        <CustomInput type='password' icon='account-lock' label='true' />
         <CustomButton screen="Home" sujet="Home"/>
         <CustomButton screen="Login" sujet="Login"/>
+        </View>
         </View>
         
     )
@@ -23,17 +29,32 @@ const Signup = ()=>{
 export default Signup;
 
 const styles = StyleSheet.create({
-    container: {
-      flex: 1,
-    //   justifyContent: "center",
-    //   alignItems: "center",
-      backgroundColor: "#fff",
-    },
-    text:{
-      fontSize: 40,
-      color: '#0a9dfb',
-      paddingLeft: 32,
-      
-    },
-    
+  container: {
+    flex: 1,
+    backgroundColor: "#fff",
+
+  },
+  main: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  form: {
+    flex: 3,
+    flexDirection: 'column',
+    justifyContent: 'center',
+    alignSelf: 'center',
+  },
+  text: {
+    fontSize: 30,
+    color: '#0a9dfb',
+    paddingLeft: 32,
+    justifyContent: "center",
+    alignItems: "center",
+  },
+  img: {
+    width: '90%',
+    height: '90%',
+    resizeMode: 'contain',
+  }
   });

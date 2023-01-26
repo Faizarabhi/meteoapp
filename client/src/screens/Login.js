@@ -9,16 +9,16 @@ import { CustomInput, Header, CustomButton } from "../components";
 const Login = () => {
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.form}>
         <View style={styles.main}>
           <Image source={require('../../assets/login.png')} style={styles.img} />
         </View>
+        <View style={styles.form}>
         <Text style={styles.text}>Log with us</Text>
         <CustomInput type='email' icon='email' label='true' />
         <CustomInput type='password' icon='account-lock' label='true' />
         <CustomButton screen="Home" sujet='Log in' />
         <CustomButton screen="Signup" sujet='Create Account' />
-      </View>
+        </View>
     </SafeAreaView>
   );
 };
@@ -32,20 +32,16 @@ const styles = StyleSheet.create({
 
   },
   main: {
-    width: '60%',
-    height: '60%',
-    // flex: 1,
+    flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
   },
  
   form: {
-    flex: 1,
+    flex: 3,
     flexDirection: 'column',
-    // alignItems: 'center',
-    // justifyContent: 'center',
-    // alignSelf: 'center',
-
+    justifyContent: 'center',
+    alignSelf: 'center',
   },
   text: {
     fontSize: 50,
@@ -54,20 +50,10 @@ const styles = StyleSheet.create({
     justifyContent: "center",
     alignItems: "center",
   },
-  main: {
-    width: '100%',
-    height: '40%',
-    // backgroundColor: 'red',
-    flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-
-  },
   img: {
     width: '90%',
     height: '90%',
     resizeMode: 'contain',
-
   }
 
 });

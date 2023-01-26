@@ -33,21 +33,22 @@ container:{
    
 },
 label:{
-    fontSize: 32,
-    margin: 11,
-    textTransform: 'capitalize'
+    fontSize: 25,
+    textTransform: 'capitalize',
+    marginVertical: 5
 },
 input:{
     borderColor: "#0a9dfb",
-    width: "80%",
+    width: "100%",
     borderWidth: 1,
     borderRadius: 10,
     padding: 10,
+    marginVertical: 5
 },
 icon:{
     position: "absolute",
     bottom: 12,
-    right: 100,
+    right: 20,
     color: '#0a9dfb'
 }
 })

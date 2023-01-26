@@ -6,18 +6,22 @@ import {
     Image
 } from 'react-native'
 const CustomCard = ({ data }) => {
-    console.log('jj')
-    console.log(data.data,'custimaze')
+    // console.log('/----------------------- another one-------------------------/')
+    // console.log(data,'custimaze')
+    //  {"date": "2023-01-31 12:00:00", "desc": "Clear", "icon": "01d", 
+    // "temp": 289.99, "temp_max": 289.99, "temp_min": 289.99, 
+    // "wind": {"deg": 87, "gust": 4.68, "speed": 3.45}
+    let state = data.data
     return (
 
         <TouchableOpacity style={styles.container}>
-            {/* <Text>{data}</Text> */}
-            {/* <View style={styles.card}>
-                <Image source={data[0].img} style={styles.img} />
-                <Text>{data[0].desc}</Text>
-                <Text style={styles.day}>WED</Text>
-                <Text style={styles.deg}>+10°C</Text>
-            </View> */}
+            <View style={styles.card}>
+            <Text>{state.wind.deg}°C</Text>
+                {/* <Image source={data[0].img} style={styles.img} /> */}
+                <Text>{state.desc}</Text>
+                <Text style={styles.day}>{state.wind.speed}</Text>
+                <Text style={styles.deg}>+{state.temp}</Text>
+            </View>
         </TouchableOpacity>
     )
 }

@@ -9,7 +9,13 @@ const fetchApiweather = async (req, res) => {
         .then((data) => {
             let arr = []
             data.list.forEach((element, i) => {
-                arr.push({data:{desc:element.weather[0].main,icon:element.weather[0].icon}, wind:element.wind,date: element.dt_txt,temp:element.main.temp,temp_min:element.main.temp_min,temp_max:element.main.temp_max})
+                arr.push({
+                    id: i,
+                    data:{desc:element.weather[0].main,icon:element.weather[0].icon,
+                    wind:element.wind,
+                    date: element.dt_txt,temp:element.main.temp,
+                    temp_min:element.main.temp_min,
+                    temp_max:element.main.temp_max}})
                 // arr.push({date: element.dt_txt})
             })
             return arr

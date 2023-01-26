@@ -21,6 +21,7 @@ const Home = () => {
       .then((response) => response.json())
       .then((data) =>setMeteo(data) )
       .catch((error) => console.error(error));
+      console.log(meteo)
   }, []);
 
 
@@ -30,10 +31,11 @@ const Home = () => {
       {/* <CustomMainCard/> */}
 {meteo? <>
       <View style={styles.row}>
-        <FlatList
+      <FlatList
           data={Cloud}
+          // numColumns={2}
           renderItem={({ item }) => <>
-            <CustomMainCard name={item.name} />
+            <CustomMainCard data={item} />
           </>}
           keyExtractor={item => item.id}
           horizontal={true}

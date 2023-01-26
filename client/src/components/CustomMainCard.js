@@ -6,7 +6,7 @@ import {
     Image
 } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-const CustomMainCard = ({name}) => {
+const CustomMainCard = () => {
     return (
 
         <TouchableOpacity style={styles.container}>
@@ -15,7 +15,7 @@ const CustomMainCard = ({name}) => {
                     <Text>03/12</Text>
                     <Text style={styles.day}>WED</Text>
                     <Text style={styles.deg}>+10°C</Text>
-                    <Text>{name}</Text>
+                    <Text>Sunday</Text>
                     <View style={styles.temp}>
                     <Text>16 mph</Text>
                     <MaterialCommunityIcons name="weather-windy" size={24} color="white" />
