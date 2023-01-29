@@ -1,5 +1,5 @@
 const express=require('express');
-const { fetchApiweather} = require('../../Controllers/Weather/Weather');
+const { fetchAllweather, fetchByHour, fetchByDays, fetchNow} = require('../../Controllers/Weather/Weather');
 const router = express.Router();
-router.get('/Apiweather',fetchApiweather)
+router.get('/Apiweather',fetchAllweather).get('/ByHour', fetchByHour).get('/ByDays', fetchByDays).all('/Now',fetchNow)
 module.exports = router

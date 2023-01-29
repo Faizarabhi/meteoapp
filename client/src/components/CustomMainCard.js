@@ -39,7 +39,7 @@ const CustomMainCard = () => {
     )
 }
 export default CustomMainCard
-// #0a9dfb, #84d4fc, #447494, #5484ac, #adc594, #2c4454 
+
 const styles = StyleSheet.create({
 
     container: {

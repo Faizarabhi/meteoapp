@@ -34,7 +34,8 @@ const styles = StyleSheet.create({
         opacity: 0.7,
         margin: 10,
         height: '60%',
-        padding: 12
+        padding: 12,
+        
     },
     card: {
         flex: 1,
@@ -54,7 +55,7 @@ const styles = StyleSheet.create({
     },
     deg: {
         fontSize: 20,
-        fontWeight: Platform.OS === 'android' ? 'normal' : '400',
+        fontWeight:   '400',
         color: 'white'
     }
 })

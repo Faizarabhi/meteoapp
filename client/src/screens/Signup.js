@@ -19,8 +19,8 @@ const Signup = ()=>{
         <CustomInput type='user name' icon='account' label='true' />
         <CustomInput type='email' icon='email' label='true' />
         <CustomInput type='password' icon='account-lock' label='true' />
-        <CustomButton screen="Home" sujet="Home"/>
-        <CustomButton screen="Login" sujet="Login"/>
+        <CustomButton screen="Home" sujet="Create"/>
+        <CustomButton screen="Login" sujet="Already you have Account"/>
         </View>
         </View>
         
