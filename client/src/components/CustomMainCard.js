@@ -6,35 +6,35 @@ import {
     Image
 } from 'react-native'
 import { MaterialCommunityIcons } from '@expo/vector-icons';
-const CustomMainCard = () => {
+const CustomMainCard = ({data}) => {
     return (
 
         <TouchableOpacity style={styles.container}>
+            <View style={styles.right}>
+                <Image style={styles.img} source={require('../../assets/cloudy.png')} />
+            </View>
             <View style={styles.left}>
                 <View style={styles.card}>
-                    <Text>03/12</Text>
-                    <Text style={styles.day}>WED</Text>
-                    <Text style={styles.deg}>+10°C</Text>
-                    <Text>Sunday</Text>
+                    <Text>{data.date}</Text>
+                    <Text style={styles.day}>{data.day} </Text>
+                    <Text style={styles.deg}>+{data.temp}</Text>
                     <View style={styles.temp}>
-                    <Text>16 mph</Text>
-                    <MaterialCommunityIcons name="weather-windy" size={24} color="white" />
-                    <Text>12 km/h</Text>
-                    <MaterialCommunityIcons name="fan-speed-1" size={24} color="white" />
+                        <Text>{data?.wind?.gust} mph</Text>
+                        <MaterialCommunityIcons name="weather-windy" size={24} color="white" />
+                        <Text>{data?.wind?.speed} km/h</Text>
+                        <MaterialCommunityIcons name="fan-speed-1" size={24} color="white" />
                     </View>
                     <View style={styles.temp}>
-                        <Text style={styles.deg}>17°</Text>
+                        <Text style={styles.deg}>{data.temp_max}°</Text>
                         <MaterialCommunityIcons name="arrow-down-thin" size={24} color="white" />
-                        <Text style={styles.deg}>3°</Text>
+                        <Text style={styles.deg}>{data.temp_min}°</Text>
                         <MaterialCommunityIcons name="arrow-up-thin" size={24} color="white" />
                     </View>
 
                 </View>
 
             </View>
-            <View style={styles.right}>
-                <Image style={styles.img} source={require('../../assets/cloudy.png')} />
-            </View>
+
         </TouchableOpacity>
     )
 }
@@ -43,18 +43,21 @@ export default CustomMainCard
 const styles = StyleSheet.create({
 
     container: {
-        flexDirection: 'row',
-        width: '100%'
+        flex: 1,
+        flexDirection: 'column',
+        width: '100%',
     },
     left: {
         // backgroundColor: 'yellow',
-        width: '30%',
+        width: '100%',
+        flex: 3,
         justifyContent: 'center',
         alignItems: 'center',
     },
     right: {
         // backgroundColor: 'green',
-        width: '70%',
+        width: '100%',
+        flex: 3,
         justifyContent: 'center',
         alignItems: 'center',
     },
@@ -64,10 +67,10 @@ const styles = StyleSheet.create({
         height: '100%',
         resizeMode: 'contain',
     },
-    temp:{
+    temp: {
         flexDirection: 'row',
     },
-    text:{
+    text: {
         color: 'white'
 
     },
